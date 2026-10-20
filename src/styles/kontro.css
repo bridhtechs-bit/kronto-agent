@@ -1,0 +1,790 @@
+/* ============================================
+   KONTRO — Global Styles
+   Mobile-first, Bootstrap overrides
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap');
+@import './variables.css';
+
+/* ---------- Base ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--kontro-background);
+  color: var(--kontro-text);
+  -webkit-font-smoothing: antialiased;
+  overscroll-behavior: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  color: var(--kontro-text);
+}
+
+/* ---------- Bootstrap Overrides ---------- */
+.btn-kontro-primary {
+  background-color: var(--kontro-primary);
+  border-color: var(--kontro-primary);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1.75rem;
+  transition: all 0.2s ease;
+}
+.btn-kontro-primary:hover,
+.btn-kontro-primary:focus {
+  background-color: #1f2937;
+  border-color: #1f2937;
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(17, 24, 39, 0.25);
+}
+
+.btn-kontro-accent {
+  background-color: var(--kontro-accent);
+  border-color: var(--kontro-accent);
+  color: #fff;
+  font-weight: 700;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1.75rem;
+  transition: all 0.2s ease;
+}
+.btn-kontro-accent:hover,
+.btn-kontro-accent:focus {
+  background-color: #ea6c10;
+  border-color: #ea6c10;
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(249, 115, 22, 0.35);
+}
+
+.btn-kontro-outline {
+  background-color: var(--kontro-surface);
+  border: 1.5px solid var(--kontro-border);
+  color: var(--kontro-text);
+  font-weight: 600;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1.75rem;
+  transition: all 0.2s ease;
+}
+.btn-kontro-outline:hover {
+  background-color: var(--kontro-background);
+  border-color: var(--kontro-accent);
+  color: var(--kontro-accent);
+}
+
+/* ---------- Cards ---------- */
+.kontro-card {
+  background: var(--kontro-surface);
+  border: 1px solid var(--kontro-border);
+  border-radius: 1rem;
+  box-shadow: 0 1px 6px rgba(17, 24, 39, 0.06);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.kontro-card:hover {
+  box-shadow: 0 6px 24px rgba(17, 24, 39, 0.1);
+  transform: translateY(-2px);
+}
+
+/* ---------- Badges ---------- */
+.badge-accent {
+  background-color: rgba(249, 115, 22, 0.12);
+  color: var(--kontro-accent);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.badge-success {
+  background-color: rgba(22, 163, 74, 0.1);
+  color: var(--kontro-success);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+}
+
+.badge-danger {
+  background-color: rgba(220, 38, 38, 0.12);
+  color: var(--kontro-danger);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+}
+
+.badge-muted {
+  background-color: var(--kontro-background);
+  color: var(--kontro-text-muted);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid var(--kontro-border);
+}
+
+/* ---------- Section headings ---------- */
+.section-eyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--kontro-accent);
+  padding: 0.3rem 0.85rem;
+  background: rgba(249,115,22,0.08);
+  border-radius: 999px;
+  margin-bottom: 0.75rem;
+}
+
+/* ---------- Navbar ---------- */
+.kontro-navbar {
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--kontro-border);
+  box-shadow: 0 1px 8px rgba(17, 24, 39, 0.04);
+  z-index: 1040;
+}
+
+.kontro-navbar .navbar-brand-name {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--kontro-text);
+  line-height: 1;
+}
+
+.kontro-navbar .navbar-brand-tag {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--kontro-accent);
+  background: rgba(249,115,22,0.1);
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+}
+
+.kontro-navbar .nav-link {
+  color: var(--kontro-text-muted) !important;
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0.5rem 0.85rem !important;
+  border-radius: 0.5rem;
+  transition: color 0.15s, background 0.15s;
+}
+.kontro-navbar .nav-link:hover,
+.kontro-navbar .nav-link.active {
+  color: var(--kontro-text) !important;
+  background: var(--kontro-background);
+}
+
+/* ---------- Hero section ---------- */
+.hero-section {
+  background: var(--kontro-surface);
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-glow-1 {
+  position: absolute;
+  top: -80px;
+  right: 15%;
+  width: 360px;
+  height: 360px;
+  background: radial-gradient(circle, rgba(249,115,22,0.12) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero-glow-2 {
+  position: absolute;
+  bottom: -60px;
+  left: -80px;
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(circle, rgba(17,24,39,0.05) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero-title {
+  font-size: clamp(2rem, 6vw, 3rem);
+  font-weight: 800;
+  line-height: 1.18;
+  letter-spacing: -0.03em;
+  color: var(--kontro-text);
+}
+
+.hero-title .accent-text {
+  color: var(--kontro-accent);
+}
+
+.hero-subtitle {
+  font-size: 1.05rem;
+  color: var(--kontro-text-muted);
+  line-height: 1.75;
+}
+
+/* ---------- Live badge ---------- */
+.live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  background: var(--kontro-surface);
+  border: 1px solid var(--kontro-border);
+  border-radius: 999px;
+  box-shadow: 0 1px 6px rgba(17, 24, 39, 0.07);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--kontro-text);
+}
+
+.live-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--kontro-accent);
+  border-radius: 50%;
+  position: relative;
+}
+
+.live-dot::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: var(--kontro-accent);
+  border-radius: 50%;
+  animation: ping 1.2s ease-out infinite;
+  opacity: 0.6;
+}
+
+@keyframes ping {
+  0% { transform: scale(1); opacity: 0.6; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+
+/* ---------- Mockup Dashboard ---------- */
+.mockup-card {
+  background: var(--kontro-surface);
+  border: 1px solid var(--kontro-border);
+  border-radius: 1.25rem;
+  box-shadow: 0 12px 48px rgba(17, 24, 39, 0.12);
+}
+
+.mockup-header {
+  background: var(--kontro-background);
+  border-radius: 1.25rem 1.25rem 0 0;
+  border-bottom: 1px solid var(--kontro-border);
+  padding: 1.25rem 1.5rem;
+}
+
+.mockup-body { padding: 1.25rem 1.5rem; }
+
+.metric-box {
+  background: var(--kontro-background);
+  border: 1px solid var(--kontro-border);
+  border-radius: 0.875rem;
+  padding: 1rem;
+}
+
+.metric-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--kontro-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.metric-value {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--kontro-text);
+  line-height: 1.2;
+  margin-top: 0.25rem;
+}
+
+.metric-sub {
+  font-size: 0.72rem;
+  color: var(--kontro-text-muted);
+  margin-top: 0.4rem;
+}
+
+.reconcile-bar {
+  height: 6px;
+  background: var(--kontro-background);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+.reconcile-bar-fill {
+  height: 100%;
+  background: var(--kontro-success);
+  border-radius: 999px;
+  transition: width 1s ease;
+}
+
+.alert-box {
+  background: rgba(220, 38, 38, 0.06);
+  border: 1px solid rgba(220, 38, 38, 0.2);
+  border-radius: 0.875rem;
+  padding: 0.875rem 1rem;
+}
+
+.alert-icon {
+  width: 36px;
+  height: 36px;
+  background: var(--kontro-danger);
+  color: #fff;
+  border-radius: 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.dispatch-bar {
+  background: var(--kontro-background);
+  border-radius: 0.625rem;
+  padding: 0.6rem 1rem;
+  font-size: 0.8rem;
+  color: var(--kontro-text-muted);
+}
+
+/* ---------- Trust Badges ---------- */
+.trust-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--kontro-background);
+  border: 1px solid var(--kontro-border);
+  border-radius: 0.625rem;
+  padding: 0.45rem 0.9rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--kontro-text);
+}
+
+.trust-badge .check-icon {
+  color: var(--kontro-success);
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+/* ---------- Problem cards ---------- */
+.problem-card {
+  background: var(--kontro-surface);
+  border: 1px solid var(--kontro-border);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  height: 100%;
+  transition: box-shadow 0.2s ease;
+}
+.problem-card:hover { box-shadow: 0 6px 24px rgba(17, 24, 39, 0.09); }
+
+.problem-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 0.75rem;
+  background: rgba(220, 38, 38, 0.1);
+  color: var(--kontro-danger);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.problem-footer {
+  color: var(--kontro-danger);
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(220, 38, 38, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+/* ---------- Steps ---------- */
+.step-card {
+  background: var(--kontro-surface);
+  border: 1px solid var(--kontro-border);
+  border-radius: 1rem;
+  padding: 2rem;
+  height: 100%;
+  position: relative;
+}
+
+.step-number {
+  width: 48px;
+  height: 48px;
+  border-radius: 0.75rem;
+  background: var(--kontro-background);
+  color: var(--kontro-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.step-footer {
+  background: var(--kontro-background);
+  border-radius: 0.75rem;
+  padding: 0.875rem 1rem;
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--kontro-text);
+}
+
+/* ---------- Benefits ---------- */
+.benefit-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 0.75rem;
+  background: rgba(249, 115, 22, 0.1);
+  color: var(--kontro-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+/* ---------- Monitor tiles ---------- */
+.monitor-tile {
+  background: var(--kontro-surface);
+  border: 1px solid var(--kontro-border);
+  border-radius: 0.875rem;
+  padding: 1.25rem;
+  height: 100%;
+  transition: box-shadow 0.2s;
+}
+.monitor-tile:hover { box-shadow: 0 4px 16px rgba(17,24,39,0.08); }
+
+.monitor-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 0.625rem;
+  background: var(--kontro-background);
+  color: var(--kontro-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  margin-bottom: 0.75rem;
+}
+
+/* ---------- Pricing ---------- */
+.pricing-card {
+  background: var(--kontro-surface);
+  border: 1px solid var(--kontro-border);
+  border-radius: 1.25rem;
+  padding: 2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.pricing-card:hover {
+  box-shadow: 0 8px 32px rgba(17, 24, 39, 0.1);
+  transform: translateY(-2px);
+}
+.pricing-card.featured {
+  border: 2px solid var(--kontro-accent);
+  box-shadow: 0 8px 32px rgba(249,115,22,0.15);
+  position: relative;
+  transform: translateY(-4px);
+}
+
+.pricing-badge-featured {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--kontro-accent);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 0.3rem 1rem;
+  border-radius: 999px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.pricing-amount {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--kontro-text);
+  line-height: 1;
+}
+
+.pricing-period {
+  font-size: 0.875rem;
+  color: var(--kontro-text-muted);
+  font-weight: 500;
+}
+
+.pricing-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  color: var(--kontro-text);
+  padding: 0.35rem 0;
+}
+.pricing-feature .fi {
+  color: var(--kontro-success);
+  font-size: 1rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* ---------- Use case cards ---------- */
+.usecase-card {
+  background: var(--kontro-surface);
+  border: 1px solid var(--kontro-border);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  height: 100%;
+  transition: box-shadow 0.2s;
+}
+.usecase-card:hover { box-shadow: 0 6px 20px rgba(17,24,39,0.09); }
+
+.usecase-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 0.75rem;
+  background: var(--kontro-background);
+  color: var(--kontro-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+/* ---------- Testimonials ---------- */
+.testimonial-card {
+  background: var(--kontro-surface);
+  border: 1px solid var(--kontro-border);
+  border-radius: 1rem;
+  padding: 2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.stars { color: var(--kontro-warning); font-size: 1rem; }
+
+.testimonial-quote {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  font-style: italic;
+  color: var(--kontro-text);
+  margin-top: 0.75rem;
+  flex-grow: 1;
+}
+
+.testimonial-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--kontro-border);
+}
+
+.testimonial-name {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--kontro-text);
+}
+
+.testimonial-role {
+  font-size: 0.8rem;
+  color: var(--kontro-text-muted);
+}
+
+/* ---------- FAQ ---------- */
+.faq-item {
+  background: var(--kontro-surface);
+  border: 1px solid var(--kontro-border);
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+.faq-item:hover { box-shadow: 0 4px 16px rgba(17,24,39,0.08); }
+
+.faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.975rem;
+  color: var(--kontro-text);
+  user-select: none;
+  gap: 1rem;
+}
+.faq-question:hover { background: var(--kontro-background); }
+
+.faq-chevron {
+  flex-shrink: 0;
+  font-size: 1.2rem;
+  color: var(--kontro-accent);
+  transition: transform 0.25s ease;
+}
+.faq-item.open .faq-chevron { transform: rotate(180deg); }
+
+.faq-answer {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.35s ease, padding 0.2s ease;
+  padding: 0 1.5rem;
+  font-size: 0.9rem;
+  color: var(--kontro-text-muted);
+  line-height: 1.75;
+}
+.faq-item.open .faq-answer {
+  max-height: 400px;
+  padding: 0 1.5rem 1.25rem;
+}
+
+/* ---------- CTA Banner ---------- */
+.cta-banner {
+  background: var(--kontro-primary);
+  border-radius: 1.5rem;
+  padding: 4rem 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-banner::before {
+  content: '';
+  position: absolute;
+  bottom: -80px; right: -80px;
+  width: 320px; height: 320px;
+  background: radial-gradient(circle, rgba(249,115,22,0.25) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.cta-banner::after {
+  content: '';
+  position: absolute;
+  top: -60px; left: -60px;
+  width: 240px; height: 240px;
+  background: radial-gradient(circle, rgba(249,115,22,0.12) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.cta-banner .cta-title {
+  color: #fff;
+  font-size: clamp(1.6rem, 4vw, 2.25rem);
+  font-weight: 800;
+}
+
+.cta-banner .cta-subtitle {
+  color: rgba(255,255,255,0.7);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* ---------- Footer ---------- */
+.kontro-footer {
+  background: var(--kontro-primary);
+  color: rgba(255,255,255,0.75);
+  padding: 4rem 0 2rem;
+}
+.kontro-footer .footer-brand-name {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #fff;
+}
+.kontro-footer .footer-heading {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+.kontro-footer a {
+  color: rgba(255,255,255,0.6);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.15s;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.kontro-footer a:hover { color: var(--kontro-accent); }
+
+.footer-divider {
+  border-color: rgba(255,255,255,0.1);
+  margin: 2.5rem 0 1.5rem;
+}
+
+.footer-legal {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.4);
+}
+
+/* ---------- Utils ---------- */
+.text-accent { color: var(--kontro-accent) !important; }
+.text-success-kontro { color: var(--kontro-success) !important; }
+.text-danger-kontro { color: var(--kontro-danger) !important; }
+.text-muted-kontro { color: var(--kontro-text-muted) !important; }
+.bg-surface { background: var(--kontro-surface) !important; }
+.bg-background { background: var(--kontro-background) !important; }
+
+/* ---------- Section background alternation ---------- */
+section.bg-alt { background-color: var(--kontro-background); }
+section.bg-white { background-color: var(--kontro-surface); }
+
+/* ---------- Scroll-reveal animation ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- Mobile hamburger ---------- */
+.navbar-toggler {
+  border: 1.5px solid var(--kontro-border);
+  border-radius: 0.625rem;
+  padding: 0.4rem 0.6rem;
+}
+.navbar-toggler:focus { box-shadow: none; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 767.98px) {
+  .pricing-card.featured { transform: none; }
+  .cta-banner { padding: 2.5rem 1.5rem; }
+  .hero-section { padding-top: 5rem; }
+}

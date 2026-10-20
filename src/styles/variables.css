@@ -1,0 +1,19 @@
+:root {
+  /* Brand */
+  --kontro-primary: #111827;
+  --kontro-accent: #F97316;
+
+  /* Surfaces */
+  --kontro-background: #F3F4F6;
+  --kontro-surface: #FFFFFF;
+  --kontro-border: #E5E7EB;
+
+  /* Text */
+  --kontro-text: #111827;
+  --kontro-text-muted: #6B7280;
+
+  /* Status */
+  --kontro-success: #16A34A;
+  --kontro-warning: #F59E0B;
+  --kontro-danger: #DC2626;
+}
